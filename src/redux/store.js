@@ -1,10 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { taskReducer } from "./slice";
+import { Reducer } from "./slice";
 import { filterReducer } from "./filtersSlice";
 
 export const store = configureStore({
   reducer: {
-     task: taskReducer,
+    cars: Reducer,
     filters: filterReducer,
   },
 });

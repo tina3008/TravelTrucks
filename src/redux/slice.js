@@ -1,9 +1,10 @@
+// import startContacts from "../components/contact.json";
 import { createSelector, createSlice } from "@reduxjs/toolkit";
-import { fetchTasks } from "./operation";
-import { selectTasks, selectNameFilter } from "./selectors";
+import { fetchCatalog, fetchCarId } from "./operations";
+import { selectCatalog, selectNameFilter } from "./selectors";
 
-const tasksSlice = createSlice({
-  name: "tasks",
+const Slice = createSlice({
+  name: "cars",
   initialState: {
     items: [],
     loading: false,
@@ -12,29 +13,31 @@ const tasksSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(fetchTasks.pending, (state) => {
+      .addCase(fetchCatalog.pending, (state) => {
         state.error = false;
         state.isLoading = true;
       })
-      .addCase(fetchTasks.fulfilled, (state, action) => {
+      .addCase(fetchCatalog.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;
       })
-      .addCase(fetchTasks.rejected, (state, action) => {
+      .addCase(fetchCatalog.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });
+    
   },
 });
 
-export const visibleTasks = createSelector(
-  [selectTasks, selectNameFilter],
-  (tasks, filtersTask) => {
-    return tasks.filter((task) =>
-      task.name.toLowerCase().includes(filtersTask.toLowerCase())
+export const visibleCars = createSelector(
+  [selectCatalog, selectNameFilter],
+  (cars, filtersCar) => {
+    return cars.filter((car) =>
+      car.name.toLowerCase().includes(filtersCar.toLowerCase())
     );
   }
 );
 
-export const taskReducer = tasksSlice.reducer;
+
+export const Reducer = Slice.reducer;
