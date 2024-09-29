@@ -1,13 +1,29 @@
-import { Suspense, useEffect, useRef, useState } from "react";
-import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
-import CarDetails from "../../components/CarDetails/CarDetails";
+import React from "react";
+import css from "./DetalisPage.module.css";
+import { fetchCarById } from "../../redux/operations";
+import { visibleCars } from "../../redux/slice";
+import { selectCarById } from "../../redux/selectors";
+import { useEffect } from "react";
 
-export default function DetailsPage() {
-  const { Id } = useParams();
+import { useDispatch, useSelector } from "react-redux";
+
+import { Outlet, useParams } from "react-router";
+
+export default function DetailsPages() {
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const CarById = useSelector(selectCarById);
+
+  useEffect(() => {
+    dispatch(fetchCarById(id));
+  }, [dispatch, id]);
+  const filtrCars = useSelector(visibleCars);
+
+
   return (
-    <main>
-      <div>Now showing product with id - ${Id}</div>
-      <CarDetails/>
-    </main>
+    <ul className={css.list}>
+      {/* <CarDetails CarById={CarById} /> */}
+      <p>{CarById.name}</p>
+    </ul>
   );
 }

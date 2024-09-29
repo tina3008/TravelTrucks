@@ -1,0 +1,36 @@
+.location {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.inputLocation {
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  width: 360px;
+  height: 56px;
+  background: var(--inputs);
+  align-items: center;
+  justify-content: center;
+}
+
+.locationField {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: none;
+}
+.icon {
+  position: relative;
+  top: 5px;
+}

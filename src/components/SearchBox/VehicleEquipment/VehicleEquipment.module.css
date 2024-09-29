@@ -1,0 +1,69 @@
+.vehicleEquipment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+}
+.title::after {
+  content: "";
+  display: block;
+  width: 360px;
+  height: 1px;
+  background-color: var(--gray-light);
+  margin-top: 24px;
+}
+
+.imageBlocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 8px;
+  margin-top: 24px;
+  width: 360px;
+}
+
+.image {
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  padding: 16px;
+  width: 112px;
+  height: 96px;
+}
+
+.image:hover {
+  border: 1px solid var(--button);
+}
+
+.iconTxt {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--main);
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.icon {
+  margin-left: 24px;
+}
+
+.imageBig {
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  padding: 4px 16px;
+  width: 112px;
+  height: 96px;
+}
+
+.imageBig:hover {
+  border: 1px solid var(--button);
+}

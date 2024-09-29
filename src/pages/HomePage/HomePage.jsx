@@ -1,7 +1,10 @@
+import Home from "../../components/Home/Home";
+import css from "./HomePage.module.css"
+
 export default function HomePage() {
   return (
-    <>
-      <h2>Home</h2>
-    </>
+    <section className={css.homeContainer}>
+      <Home />
+    </section>
   );
 }
