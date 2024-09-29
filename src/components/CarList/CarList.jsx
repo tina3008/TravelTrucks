@@ -48,7 +48,7 @@ export default function CarList() {
 
                 <span>
                   <svg width="16" height="16" className={css.map}>
-                    <use href="/public/sprite.svg#icon-Map"></use>
+                    <use href="/sprite.svg#icon-Map"></use>
                   </svg>
                 </span>
                 <p>{car.location}</p>
