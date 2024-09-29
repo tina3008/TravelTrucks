@@ -8,7 +8,7 @@ export function Location() {
       <div className={css.inputLocation}>
         <span className={css.icon}>
           <svg width="20" height="20">
-            <use href="/public/images/sprite.svg#icon-Map"></use>
+            <use href="/public/sprite.svg#icon-Map"></use>
           </svg>
         </span>
         <input

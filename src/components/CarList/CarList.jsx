@@ -31,14 +31,14 @@ export default function CarList() {
                   // onClick={handleHurtToggle}
                 >
                   <svg width="26" height="24">
-                    <use href="../../../public/images/sprite.svg#icon-hurt"></use>
+                    <use href="/public/sprite.svg#icon-hurt"></use>
                   </svg>
                 </button>
               </div>
               <div className={css.secondLine}>
                 <span>
                   <svg width="16" height="16" className={css.star}>
-                    <use href="../../../public/images/sprite.svg#icon-star"></use>
+                    <use href="/public/sprite.svg#icon-star"></use>
                   </svg>
                 </span>
                 <div className={css.raiting}>
@@ -48,7 +48,7 @@ export default function CarList() {
 
                 <span>
                   <svg width="16" height="16" className={css.map}>
-                    <use href="../../../public/images/sprite.svg#icon-Map"></use>
+                    <use href="/public/sprite.svg#icon-Map"></use>
                   </svg>
                 </span>
                 <p>{car.location}</p>
