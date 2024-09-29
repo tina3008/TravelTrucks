@@ -8,7 +8,7 @@ export default function VehicleEquipment() {
         <li className={css.image}>
           <span className={css.icon}>
             <svg width="32" height="32">
-              <use href="../../../public/images/sprite.svg#icon-wind"></use>
+              <use href="/public/images/sprite.svg#icon-wind"></use>
             </svg>
           </span>
           <p className={css.iconTxt}>AC</p>
@@ -16,7 +16,7 @@ export default function VehicleEquipment() {
         <li className={css.image}>
           <span className={css.icon}>
             <svg width="32" height="32">
-              <use href="../../../public/images/sprite.svg#icon-diagram"></use>
+              <use href="/public/images/sprite.svg#icon-diagram"></use>
             </svg>
           </span>
           <p className={css.iconTxt}>Automatic</p>
@@ -24,7 +24,7 @@ export default function VehicleEquipment() {
         <li className={css.image}>
           <span className={css.icon}>
             <svg width="32" height="32">
-              <use href="../../../public/images/sprite.svg#icon-cup-hot"></use>
+              <use href="/public/images/sprite.svg#icon-cup-hot"></use>
             </svg>
           </span>
           <p className={css.iconTxt}>Kitchen</p>
@@ -32,7 +32,7 @@ export default function VehicleEquipment() {
         <li className={css.image}>
           <span className={css.icon}>
             <svg width="32" height="32">
-              <use href="../../../public/images/sprite.svg#icon-tv"></use>
+              <use href="/public/images/sprite.svg#icon-tv"></use>
             </svg>
           </span>
           <p className={css.iconTxt}>TV</p>
@@ -40,7 +40,7 @@ export default function VehicleEquipment() {
         <li className={css.image}>
           <span className={css.icon}>
             <svg width="32" height="32">
-              <use href="../../../public/images/sprite.svg#icon-bi_droplet"></use>
+              <use href="/public/images/sprite.svg#icon-bi_droplet"></use>
             </svg>
           </span>
           <p className={css.iconTxt}>Bathroom</p>

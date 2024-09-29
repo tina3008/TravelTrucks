@@ -9,7 +9,7 @@ export default function Badgets({ car }) {
       {transmission === "automatic" && (
         <div className={css.category}>
           <svg className={css.iconCategory}>
-            <use href="../../../../public/images/sprite.svg#icon-diagram"></use>
+            <use href="/public/images/sprite.svg#icon-diagram"></use>
           </svg>
           <p className={css.textCategory}>Transmission</p>
         </div>
@@ -17,7 +17,7 @@ export default function Badgets({ car }) {
       {gas && (
         <div className={css.category}>
           <svg className={css.iconCategory}>
-            <use href="../../../../public/images/sprite.svg#icon-petrol"></use>
+            <use href="/public/images/sprite.svg#icon-petrol"></use>
           </svg>
           <p className={css.textCategory}>Petrol</p>
         </div>
@@ -25,7 +25,7 @@ export default function Badgets({ car }) {
       {kitchen && (
         <div className={css.category}>
           <svg className={css.iconCategory}>
-            <use href="../../../../public/images/sprite.svg#icon-cup-hot"></use>
+            <use href="/public/images/sprite.svg#icon-cup-hot"></use>
           </svg>
           <p className={css.textCategory}>Kitchen</p>
         </div>
@@ -33,7 +33,7 @@ export default function Badgets({ car }) {
       {AC && (
         <div className={css.category}>
           <svg className={css.iconCategory}>
-            <use href="../../../../public/images/sprite.svg#icon-wind"></use>
+            <use href="/public/images/sprite.svg#icon-wind"></use>
           </svg>
           <p className={css.textCategory}>AC</p>
         </div>
@@ -41,7 +41,7 @@ export default function Badgets({ car }) {
       {TV && (
         <div className={css.category}>
           <svg className={css.iconCategory}>
-            <use href="../../../../public/images/sprite.svg#icon-tv"></use>
+            <use href="/public/images/sprite.svg#icon-tv"></use>
           </svg>
           <p className={css.textCategory}>TV</p>
         </div>
@@ -49,7 +49,7 @@ export default function Badgets({ car }) {
       {radio && (
         <div className={css.category}>
           <svg className={css.iconCategory}>
-            <use href="../../../../public/images/sprite.svg#icon-ui-radios"></use>
+            <use href="x/public/images/sprite.svg#icon-ui-radios"></use>
           </svg>
           <p className={css.textCategory}>Radio</p>
         </div>
@@ -57,7 +57,7 @@ export default function Badgets({ car }) {
       {bathroom && (
         <div className={css.category}>
           <svg className={css.iconCategory} height="20">
-            <use href="../../../../public/images/sprite.svg#icon-droplet"></use>
+            <use href="/public/images/sprite.svg#icon-droplet"></use>
           </svg>
           <p className={css.textCategory}>Bathroom</p>
         </div>
