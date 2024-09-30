@@ -1,13 +1,11 @@
-import { visibleCars } from "../../redux/slice";
+
 import css from "./CarList.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link, useLocation, NavLink } from "react-router-dom";
 import Badgets from "./Badgets/Badgets";
 
-export default function CarList() {
+export default function CarList({ filtrCars }) {
   const dispatch = useDispatch();
-  const filtrCars = useSelector(visibleCars);
-
   return (
     <ul className={css.list}>
       {filtrCars.map((car) => {

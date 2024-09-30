@@ -23,7 +23,8 @@ const Slice = createSlice({
       .addCase(fetchCatalog.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = action.payload;
+        state.items = action.payload.items;
+        state.totalPage = Math.ceil(action.payload.total / 4);
       })
       .addCase(fetchCatalog.rejected, (state, action) => {
         state.isLoading = false;
@@ -37,7 +38,7 @@ const Slice = createSlice({
       .addCase(fetchCarById.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.carDetals = action.payload;
+        state.carDetals = action.payload.item;
       })
       .addCase(fetchCarById.rejected, (state, action) => {
         state.isLoading = false;
