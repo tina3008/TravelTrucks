@@ -12,6 +12,7 @@ const Slice = createSlice({
     error: null,
     item: [],
     camperDetails: {},
+    selectedCar: null,
   },
 
   extraReducers: (builder) => {
@@ -38,18 +39,17 @@ const Slice = createSlice({
       .addCase(fetchCarById.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.carDetals = action.payload.item;
+        state.carDetals = action.payload;
       })
       .addCase(fetchCarById.rejected, (state, action) => {
         state.isLoading = false;
         state.error = null;
-    
       });
   },
 });
 
-export const visibleCars = createSelector(
-  [selectCatalog || selectCarById, selectNameFilter],
+ export const visibleCars = createSelector(
+  [selectCatalog, selectNameFilter],
   (cars, filtersCar) => {
     return cars.filter((car) =>
       car.name.toLowerCase().includes(filtersCar.toLowerCase())

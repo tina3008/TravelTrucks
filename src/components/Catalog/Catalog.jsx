@@ -1,7 +1,7 @@
 import SearchBox from "../SearchBox/SearchBox";
 import CarList from "../CarList/CarList";
 import { fetchCatalog } from "../../redux/operations";
-import { selectError, selectLoading } from "../../redux/selectors";
+import { selectError, selectLoading, selectTotal } from "../../redux/selectors";
 import {  useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
@@ -14,12 +14,14 @@ import { visibleCars } from "../../redux/slice";
 function Catalog() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
+  
   const isError = useSelector(selectError);
   useEffect(() => {
     dispatch(fetchCatalog());
   }, [dispatch]);
   const [page, setPage] = useState(1);
-    const filtrCars = useSelector(visibleCars);
+ const filtrCars = useSelector(visibleCars);
+  // const pages = useSelector(totalPage);
   return (
     <section className={css.fullPage}>
       <div className={css.SearchBox}>
