@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useParams } from "react-router";
 import css from "./DetalisPage.module.css";
 import { fetchCarById } from "../../redux/operations";
-import { visibleCars, Reducer, fetchCarById } from "../../redux/slice";
+import { visibleCars, Reducer,  } from "../../redux/slice";
 import { selectCarById, selectLoading } from "../../redux/selectors";
 import { useEffect } from "react";
 
