@@ -53,7 +53,7 @@ export default function CarList({ filtrCars }) {
               </div>
               <p className={css.description}>{car.description} </p>
               <Badgets car={car} />
-              <NavLink to={`/movies/${car.id}`} className={css.button}>
+              <NavLink to={`/catalog/${car.id}`} className={css.button}>
                 Show more
               </NavLink>
             </div>
