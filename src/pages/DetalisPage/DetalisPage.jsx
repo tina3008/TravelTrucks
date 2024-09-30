@@ -22,7 +22,7 @@ export default function DetalisPage() {
 
   return (
     <ul className={css.list}>
-      <p>qqqqqqqqqq</p>
+
       <p>{id}</p>
       {/* <p>{CarById.name}</p> */}
       {/* <CarDetails xxx={id} /> */}

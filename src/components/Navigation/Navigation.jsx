@@ -12,7 +12,7 @@ export default function Navigation() {
       <div className={css.wrapper}>
         <NavLink to="/" className={css.logo}>
           <svg className={css.logo} width="136" height="15">
-            <use href="../../../public/images/sprite.svg#icon-TravelTrucks"></use>
+            <use href="/public/sprite.svg#icon-TravelTrucks"></use>
           </svg>
         </NavLink>
         <nav>
