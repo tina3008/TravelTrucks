@@ -1,7 +1,7 @@
 // import startContacts from "../components/contact.json";
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { fetchCatalog, fetchCarById } from "./operations";
-import { selectCatalog, selectCarById, selectNameFilter } from "./selectors";
+import { selectCatalog, selectCar, selectNameFilter } from "./selectors";
 
 const Slice = createSlice({
   name: "cars",
@@ -39,7 +39,7 @@ const Slice = createSlice({
       .addCase(fetchCarById.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.carDetals = action.payload;
+        state.item = action.payload;
       })
       .addCase(fetchCarById.rejected, (state, action) => {
         state.isLoading = false;

@@ -58,65 +58,64 @@
   object-fit: cover;
 }
 
-.carFirstTxt{
+.carFirstTxt {
   display: flex;
   justify-content: space-between;
   width: 100%;
   font-family: var(--font-family);
-font-weight: 600;
-font-size: 24px;
-margin-bottom: 8px;
-line-height: 1.33333;
-color: var(--main);
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 8px;
+  line-height: 1.33333;
+  color: var(--main);
 }
 
-.hurdBtn{
- background-color: transparent;
- border: none;
- margin-left: 12px;
+.hurdBtn {
+  background-color: transparent;
+  border: none;
+  margin-left: 12px;
 }
 
-.name{
+.name {
   display: flex;
   width: 367px;
 }
 
-.secondLine{
+.secondLine {
   display: flex;
-  justify-content:left;
+  justify-content: left;
   width: 100%;
   font-family: var(--font-family);
-font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-margin-bottom: 24px;
-text-decoration-skip-ink: none;
-color: var(--main);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  text-decoration-skip-ink: none;
+  color: var(--main);
 }
 
-.star{
-fill: var(--rating);
-margin-right: 4px;
-}
-.raiting{
-  display: flex;
-text-decoration: underline;
-margin-right: 16px;
-}
-
-.map{
+.star {
+  fill: var(--rating);
   margin-right: 4px;
 }
-.description{
+.raiting {
+  display: flex;
+  text-decoration: underline;
+  margin-right: 16px;
+}
+
+.map {
+  margin-right: 4px;
+}
+.description {
   font-family: var(--font-family);
-font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-color: var(--text);
-text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
- width: 524px;
- margin-bottom: 24px;
- 
+  width: 524px;
+  margin-bottom: 24px;
 }

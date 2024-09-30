@@ -1,5 +1,5 @@
 export const selectCatalog = (state) => state.cars.items;
-export const selectCarById = (state) => state.cars.item;
+export const selectCar = (state) => state.cars.item;
 export const selectNameFilter = (state) => state.filters.name;
 export const state = (state) => state;
  

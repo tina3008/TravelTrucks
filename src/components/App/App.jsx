@@ -14,7 +14,9 @@ const DetalisPage = lazy(() =>
   import("../../pages/DetalisPage/DetalisPage.jsx")
 );
 const ReviewPage = lazy(() => import("../../pages/ReviewPage/ReviewPage.jsx"));
-
+const FeaturesPage = lazy(() =>
+  import("../../pages/FeaturesPage/Features.jsx")
+);
 export default function App() {
   const [loading, setLoading] = useState(false);
   

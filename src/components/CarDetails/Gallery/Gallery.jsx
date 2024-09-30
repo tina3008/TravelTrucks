@@ -1,24 +1,22 @@
 import React from "react";
 import css from "./Gallery.module.css";
 
-export default function Gallery({ items, showSingle }) {
+export default function Gallery({ gallery, name }) {
+  // const { gallery } =
+  //   OneCar;
   return (
-    <div className={css.image}>
-      {/* {items.map((img, index) => (
-        <li key={index} className={css.card}>
-          <p>{img.thumb}</p>
-          <p>id={index}</p>
-          <img src={img.thumb} />
+    <ul className={css.imageBlock}>
+      {gallery.map((image, index) => (
+        <li key={index} className={css.imgList}>
+          <img
+            className={css.carImg}
+            width={292}
+            height={320}
+            src={image.thumb}
+            alt={`Camper ${index + 1}`}
+          />
         </li>
-      ))} */}
-
-      <img
-        className={css.camperImg}
-        width={292}
-        height={320}
-        src={items[0].thumb}
-        alt="Camper"
-      />
-    </div>
+      ))}
+    </ul>
   );
 }
