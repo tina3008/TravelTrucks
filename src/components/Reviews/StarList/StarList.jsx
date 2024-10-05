@@ -8,11 +8,11 @@ export default function StarList({ reviewRaiting }) {
       {[...Array(5)].map((_, index) => (
         <li key={index} className={css.colorCtar}>
           {index + 1 <= reviewRaiting ? (
-            <svg width="16" height="16" fill="var(--rating)">
+            <svg width="16" height="16" className={css.colorStar}>
               <use href="/public/sprite.svg#icon-star"></use>
             </svg>
           ) : (
-            <svg width="16" height="16" fill="var(--badges)">
+            <svg width="16" height="16" className={css.colorStarNon}>
               <use href="/public/sprite.svg#icon-star"></use>
             </svg>
           )}

@@ -2,3 +2,10 @@
   display: inline-flex;
 column-gap: 4px;
 }
+.colorStar{
+fill:var(--rating);
+}
+
+.colorStarNon{
+  fill:var(--badges);
+}
