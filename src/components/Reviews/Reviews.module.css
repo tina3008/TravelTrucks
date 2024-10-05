@@ -1,0 +1,51 @@
+.reviewCower {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 44px;
+}
+.nameCower{
+  margin-bottom: 16px;
+}
+.comment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.char {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: var(--button);
+}
+
+.backChar {
+  display: flex;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: var(--badges);
+  justify-content: center;
+  align-items: center;
+}
+
+.nameCower {
+  display: inline-flex;
+  column-gap: 16px;
+}
+.nameColmBlock {
+  display: block;
+  margin-top: 8px;
+}
+.nameReviwer {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+  margin-bottom: 4px;
+}
+.starList{
+  display: inline-flex;
+column-gap: 4px;
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import css from "./CarDetailsTitle.module.css";
 
-export default function CarDetailsTitle({ OneCar }) {
+export default function CarDetailsTitle({ car }) {
   const { location, name, price, rating, reviews } =
-    OneCar;
+    car;
   return (
     <div className={css.titleBlock}>
       <h3 className={css.title}>{name}</h3>

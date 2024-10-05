@@ -3,14 +3,48 @@
   flex-direction: column;
   width: 1332px;
   padding: 48px 10px;
+  color: var(--main);
+  font-family: var(--font-family);
+  margin: 0 auto;
 }
 
-.description{
-font-family: var(--font-family);
-font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-color: var(--text);
-margin-bottom: 60px;
+.description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 60px;
 }
 
+.pageLink {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding-bottom: 24px;
+  width: 100%;
+  justify-content: left;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.normalLink {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--main);
+  line-height: 1.2;
+  position: relative;
+}
+
+.activeLink {
+  position: relative;
+}
+.activeLink::after {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 100%;
+  border-radius: 2px;
+  height: 5px;
+  background-color: var(--button);
+}

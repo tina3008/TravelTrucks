@@ -1,11 +1,8 @@
-
 import css from "./CarList.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams, Link, useLocation, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Badgets from "./Badgets/Badgets";
 
 export default function CarList({ filtrCars }) {
-  const dispatch = useDispatch();
   return (
     <ul className={css.list}>
       {filtrCars.map((car) => {

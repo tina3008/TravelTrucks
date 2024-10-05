@@ -1,0 +1,88 @@
+.formCower {
+  display: block; 
+   padding: 44px 57px;
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  width: 641px;
+}
+.formTitle{
+font-weight: 600;
+font-size: 20px;
+line-height: 1.2;
+margin-bottom: 8px;
+}
+.addText{
+  font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: var(--gray);
+margin-bottom: 24px;
+}
+
+.formStyle{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 14px;
+}
+.field{
+  border-radius: 12px;
+padding: 18px;
+width: 527px;
+background: var(--inputs);
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: var(--main);
+border: none;
+}
+.field::placeholder{
+  color: var(--gray);
+}
+.field:focus{
+  outline: none; 
+}
+.fieldMessage{
+  border-radius: 10px;
+padding: 18px;
+width: 527px;
+height: 118px;
+background: var(--inputs);
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: var(--main);
+border: none;
+resize:none;
+}
+.fieldMessage::placeholder{
+  color: var(--gray);
+}
+
+.fieldMessage:focus{
+  outline: none; 
+}
+.button{
+  border-radius: 200px;
+width: 166px;
+height: 56px;
+background: var(--button);
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: -0.01em;
+color: var(--white);
+border: none;
+margin: 0 auto;
+}
+
+.errMessage{
+  color:var(--button) ;
+}
+
+.react-calendar__navigation {
+  background-color: green; /* Замени на нужный цвет */
+}
+.react-datepicker__header{
+  background: transparent
+}

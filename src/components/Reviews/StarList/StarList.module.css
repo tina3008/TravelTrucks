@@ -1,0 +1,4 @@
+.starList{
+  display: inline-flex;
+column-gap: 4px;
+}

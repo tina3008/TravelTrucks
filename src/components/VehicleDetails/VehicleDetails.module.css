@@ -1,0 +1,17 @@
+.VehicleDetails{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    padding-top: 24px;
+    font-weight: 500;
+font-size: 16px;
+
+line-height: 1.5;
+text-align: center;
+color: var(--main)
+}
+.listDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
