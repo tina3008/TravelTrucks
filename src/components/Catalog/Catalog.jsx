@@ -1,7 +1,12 @@
 import SearchBox from "../SearchBox/SearchBox";
 import CarList from "../CarList/CarList";
 import { fetchCatalog } from "../../redux/operations";
-import { selectError, selectLoading, selectTotal } from "../../redux/selectors";
+import {
+  selectError,
+  selectLoading,
+  selectTotal,
+  selectCatalog,
+} from "../../redux/selectors";
 import {  useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";

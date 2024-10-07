@@ -1,8 +1,6 @@
 import css from "./StarList.module.css";
 
 export default function StarList({ reviewRaiting }) {
-  console.log(reviewRaiting);
-
   return (
     <ul className={css.starList}>
       {[...Array(5)].map((_, index) => (

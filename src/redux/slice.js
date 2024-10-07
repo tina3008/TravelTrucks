@@ -1,4 +1,3 @@
-// import startContacts from "../components/contact.json";
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { fetchCatalog, fetchCarById } from "./operations";
 import { selectCatalog, selectCar, selectNameFilter } from "./selectors";
@@ -11,8 +10,8 @@ const Slice = createSlice({
     loading: false,
     error: null,
     item: [],
-    camperDetails: {},
-    selectedCar: null,
+    carDetails: {},
+    selectCar: null,
   },
 
   extraReducers: (builder) => {
