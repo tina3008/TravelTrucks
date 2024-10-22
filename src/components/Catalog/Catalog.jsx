@@ -4,8 +4,6 @@ import { fetchCatalog } from "../../redux/operations";
 import {
   selectError,
   selectLoading,
-  selectTotal,
-  selectCatalog,
 } from "../../redux/selectors";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";

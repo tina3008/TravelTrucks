@@ -30,7 +30,7 @@ export default function CarList({ filtrCars }) {
               <div className={css.secondLine}>
                 <span>
                   <svg width="16" height="16" className={css.star}>
-                    <use href="/public/sprite.svg#icon-star"></use>
+                    <use href="/sprite.svg#icon-star"></use>
                   </svg>
                 </span>
                 <div className={css.raiting}>

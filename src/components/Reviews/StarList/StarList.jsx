@@ -7,11 +7,11 @@ export default function StarList({ reviewRaiting }) {
         <li key={index} className={css.colorCtar}>
           {index + 1 <= reviewRaiting ? (
             <svg width="16" height="16" className={css.colorStar}>
-              <use href="/public/sprite.svg#icon-star"></use>
+              <use href="/sprite.svg#icon-star"></use>
             </svg>
           ) : (
             <svg width="16" height="16" className={css.colorStarNon}>
-              <use href="/public/sprite.svg#icon-star"></use>
+              <use href="/sprite.svg#icon-star"></use>
             </svg>
           )}
         </li>
