@@ -23,7 +23,7 @@ export default function CarList({ filtrCars }) {
                 <p className={css.price}>€{car.price}.00</p>
                 <button className={css.hurdBtn}>
                   <svg width="26" height="24">
-                    <use href="/public/sprite.svg#icon-hurt"></use>
+                    <use href="/sprite.svg#icon-hurt"></use>
                   </svg>
                 </button>
               </div>
