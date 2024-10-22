@@ -2,7 +2,7 @@ import React from "react";
 import css from "./Badgets.module.css";
 
 export default function Badgets({ car }) {
-  const { AC, TV, kitchen, gas, transmission, radio, engine, bathroom } = car;
+  const { AC, TV, kitchen, gas, transmission, radio, engine, bathroom,  } = car;
 
   return (
     <div className={css.list}>
@@ -11,7 +11,7 @@ export default function Badgets({ car }) {
           <svg className={css.iconCategory}>
             <use href="/sprite.svg#icon-diagram"></use>
           </svg>
-          <p className={css.textCategory}>Transmission</p>
+          <p className={css.textCategory}>Automatic</p>
         </div>
       )}
       {gas && (
@@ -61,7 +61,7 @@ export default function Badgets({ car }) {
           </svg>
           <p className={css.textCategory}>Bathroom</p>
         </div>
-      )}
+      )}  
     </div>
   );
 }

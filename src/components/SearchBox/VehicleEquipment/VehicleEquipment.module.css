@@ -34,6 +34,7 @@
   padding: 16px;
   width: 112px;
   height: 96px;
+  background-color: transparent;
 }
 
 .image:hover {
@@ -52,18 +53,19 @@
   justify-content: center;
 }
 
-.icon {
-  margin-left: 24px;
-}
-
 .imageBig {
   border: 1px solid var(--gray-light);
   border-radius: 12px;
   padding: 4px 16px;
   width: 112px;
   height: 96px;
+  background-color: transparent;
 }
 
 .imageBig:hover {
+  border: 1px solid var(--button);
+}
+
+.selected {
   border: 1px solid var(--button);
 }

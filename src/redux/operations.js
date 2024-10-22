@@ -8,6 +8,8 @@ export const fetchCatalog = createAsyncThunk(
   async (searchParams, thunkAPI) => {
     try {
       const response = await axios.get(`/campers?${searchParams}`);
+console.log(response.data);
+
 
       return response.data;
     } catch (error) {

@@ -1,36 +1,32 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import css from "./DetalForm.module.css";
+import css from "./BookingForm.module.css";
 import React from "react";
 import { useId, useState } from "react";
 import * as Yup from "yup";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-
-
 const FeedbackSchema = Yup.object().shape({
-  rname: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
+  name: Yup.string()
+    .min(3, "Too short")
+    .max(50, "Too long")
     .required("Required"),
   email: Yup.string().email("Must be a valid email!").required("Required"),
-  bookDate: Yup.date().required("Date is required").nullable(),
+  bookDate: Yup.string().required("Date is required"),
   message: Yup.string()
-    .min(3, "Too short")
+    .min(1, "Too short")
     .max(256, "Too long")
     .required("Required"),
 });
 
-const initialValues = {
+const initial = {
   name: "",
   email: "",
   bookDate: "",
   message: "",
 };
 
-
-
-export default function DetalForm() {
+export default function BookingForm() {
   const nameFieldId = useId();
   const emailFieldId = useId();
   const bookDateFieldId = useId();
@@ -50,7 +46,7 @@ export default function DetalForm() {
       </p>
 
       <Formik
-        initialValues={initialValues}
+        initialValues={initial}
         onSubmit={handleSubmit}
         validationSchema={FeedbackSchema}
       >
@@ -58,7 +54,7 @@ export default function DetalForm() {
           <div>
             <Field
               type="text"
-              name="username"
+              name="name"
               id={nameFieldId}
               placeholder="Name*"
               className={css.field}
@@ -88,11 +84,10 @@ export default function DetalForm() {
           <div>
             <DatePicker
               className={css.field}
-              selected={startDate}             
+              selected={startDate}
               onChange={(date) => setStartDate(date)}
               placeholderText="Booking date*"
             />
-            {/* <Calendar/> */}
           </div>
 
           <div>
@@ -111,7 +106,7 @@ export default function DetalForm() {
             />
           </div>
 
-          <button type="submit" className={css.button}>
+          <button className={css.button} type="submit">
             Send
           </button>
         </Form>
@@ -119,3 +114,5 @@ export default function DetalForm() {
     </div>
   );
 }
+
+

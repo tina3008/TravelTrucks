@@ -1,6 +1,6 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { fetchCatalog, fetchCarById } from "./operations";
-import { selectCatalog, selectCar, selectNameFilter } from "./selectors";
+import { selectCatalog,  selectFilter } from "./selectors";
 
 const Slice = createSlice({
   name: "cars",
@@ -47,12 +47,46 @@ const Slice = createSlice({
   },
 });
 
- export const visibleCars = createSelector(
-  [selectCatalog, selectNameFilter],
-  (cars, filtersCar) => {
-    return cars.filter((car) =>
-      car.name.toLowerCase().includes(filtersCar.toLowerCase())
-    );
+export const visibleCars = createSelector(
+  [selectCatalog, selectFilter],
+  (cars, filters) => {
+    return cars.filter((car) => {
+      let matches = true;
+
+      if (filters.location) {
+        matches =
+          matches &&
+          car.location.toLowerCase().includes(filters.location.toLowerCase());
+      }
+
+      if (filters.ac) {
+        matches = matches && car.AC === filters.ac;
+      }
+
+      if (filters.transmission) {
+        matches = matches && car.transmission === filters.transmission;
+      }
+
+      if (filters.kitchen) {
+        matches = matches && car.kitchen === filters.kitchen;
+      }
+
+      if (filters.tv) {
+        matches = matches && car.TV === filters.tv;
+      }
+
+      if (filters.bathroom) {
+        matches = matches && car.bathroom === filters.bathroom;
+      }
+
+      if (filters.form) {
+        matches =
+          matches &&
+          car.form.toLowerCase().includes(filters.form.toLowerCase());
+      }
+
+      return matches;
+    });
   }
 );
 

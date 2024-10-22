@@ -20,11 +20,8 @@ export default function CarList({ filtrCars }) {
             <div>
               <div className={css.carFirstTxt}>
                 <p className={css.name}>{car.name}</p>
-                <p>€{car.price}.00</p>
-                <button
-                  className={css.hurdBtn}
-                  // onClick={handleHurtToggle}
-                >
+                <p className={css.price}>€{car.price}.00</p>
+                <button className={css.hurdBtn}>
                   <svg width="26" height="24">
                     <use href="/public/sprite.svg#icon-hurt"></use>
                   </svg>
@@ -54,6 +51,7 @@ export default function CarList({ filtrCars }) {
                 Show more
               </NavLink>
             </div>
+            <p className={css.typeHidden}>type:{car.form}</p>
           </li>
         );
       })}

@@ -30,6 +30,9 @@
   background-color: transparent;
   border: none;
 }
+.locationField:hover,:focus{
+outline:none;
+}
 .icon {
   position: relative;
   top: 5px;
