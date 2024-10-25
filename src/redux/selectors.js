@@ -8,3 +8,5 @@ export const selectError = (state) => state.cars.error;
 
 export const selectFilter = (state) => state.filters.values;
 export const selectNameFilter = (state) => state.filters.location;
+
+export const mapStateToProps = (state) => ({favorites: state.filters.favorites});

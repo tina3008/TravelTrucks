@@ -1,11 +1,29 @@
 import css from "./CarList.module.css";
 import { NavLink } from "react-router-dom";
 import Badgets from "./Badgets/Badgets";
+import { connect } from "react-redux";
+import { addToFavorites, removeFromFavorites } from "../../redux/filtersSlice";
+import { mapStateToProps } from "../../redux/selectors";
 
-export default function CarList({ filtrCars }) {
+function CarList({
+  filtrCars,
+  favorites,
+  addToFavorites,
+  removeFromFavorites,
+}) {
+  const handleClick = (car) => {
+    if (favorites.some((favorite) => favorite.id === car.id)) {
+      removeFromFavorites(car);
+    } else {
+      addToFavorites(car);
+    }
+  };
+
   return (
     <ul className={css.list}>
       {filtrCars.map((car) => {
+        const isActive = favorites.some((favorite) => favorite.id === car.id);
+
         return (
           <li key={car.id} className={css.card}>
             <div className={css.imgWrapper}>
@@ -21,7 +39,10 @@ export default function CarList({ filtrCars }) {
               <div className={css.carFirstTxt}>
                 <p className={css.name}>{car.name}</p>
                 <p className={css.price}>€{car.price}.00</p>
-                <button className={css.hurdBtn}>
+                <button
+                  className={`${css.hurdBtn} ${isActive ? css.active : ""}`}
+                  onClick={() => handleClick(car)}
+                >
                   <svg width="26" height="24">
                     <use href="/sprite.svg#icon-hurt"></use>
                   </svg>
@@ -58,3 +79,10 @@ export default function CarList({ filtrCars }) {
     </ul>
   );
 }
+
+const mapDispatchToProps = {
+  addToFavorites,
+  removeFromFavorites,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CarList);

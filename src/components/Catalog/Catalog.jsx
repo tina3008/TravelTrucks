@@ -32,6 +32,7 @@ function Catalog() {
 
   const currentCars = allCars.slice(0, visibleCount);
 
+
   return (
     <section className={css.fullPage}>
       <div className={css.SearchBox}>
@@ -40,7 +41,7 @@ function Catalog() {
 
       <div className={css.fullCarList}>
         <div className={css.carList}>
-          <CarList filtrCars={currentCars} />
+          {currentCars.length > 0 && <CarList filtrCars={currentCars} />}
         </div>
         <LoadMoreBtn onClick={handleLoadMore} />
       </div>

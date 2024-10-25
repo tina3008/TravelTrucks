@@ -1,6 +1,6 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { fetchCatalog, fetchCarById } from "./operations";
-import { selectCatalog,  selectFilter } from "./selectors";
+import { selectCatalog, selectFilter } from "./selectors";
 
 const Slice = createSlice({
   name: "cars",
@@ -12,6 +12,7 @@ const Slice = createSlice({
     item: [],
     carDetails: {},
     selectCar: null,
+    
   },
 
   extraReducers: (builder) => {
@@ -89,5 +90,6 @@ export const visibleCars = createSelector(
     });
   }
 );
+
 
 export const Reducer = Slice.reducer;

@@ -16,6 +16,9 @@
   fill: var(--rating);
   margin-right: 4px;
 }
+.nonStar{
+  margin-right: 4px;
+}
 .raiting {
   display: flex;
   text-decoration: underline;
